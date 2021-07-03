@@ -24,4 +24,8 @@ class ProductController extends Controller {
         return response( ) -> json( $this -> ProductService -> SearchNewProduct( $request ) , Response::HTTP_OK ) ;
     }
 
+    public function find( Int $id ) {
+        return response( ) -> json( $this -> ProductService -> find( $id ) , Response::HTTP_OK ) ;
+    }
+
 }

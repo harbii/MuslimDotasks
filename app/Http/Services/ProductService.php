@@ -18,6 +18,10 @@ class ProductService {
         return $product ;
     }
 
+    public function find( Int $id ) :? product {
+        return product::find( $id ) ;
+    }
+
     public function SearchNewProduct( Request $request ) : LengthAwarePaginator {
         $variableName = with ( new variable ) -> getTable( ) ;
         $product = product::query( ) -> Join ( $variableName , $variableName . '.product_id' , '=' , with ( new product ) -> getTable( ) . '.id' );

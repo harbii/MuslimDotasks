@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post ( '/product' , [ 'uses' => 'ProductController@create' , 'as' => 'api.product.create' ] ) ;
-Route::get  ( '/product' , [ 'uses' => 'ProductController@search' , 'as' => 'api.product.search' ] ) ;
+Route::post ( '/product'      , [ 'uses' => 'ProductController@create' , 'as' => 'api.product.create' ] ) ;
+Route::get  ( '/product/{id}' , [ 'uses' => 'ProductController@find'   , 'as' => 'api.product.find'   ] ) ;
+Route::get  ( '/product'      , [ 'uses' => 'ProductController@search' , 'as' => 'api.product.search' ] ) ;
